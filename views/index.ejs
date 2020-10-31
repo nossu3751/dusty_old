@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class = "title-img">
+            <img src="" id="rainbow" width="480">
+        </div>
+        <h1 class="title">COVID-19 Tracker</h1>
+        <h2 class="subtitle">The latest statistics regarding the "Corona Virus".</h2>
+        <div class="data-container">
+            <div class="stats-container">
+                <h4>Cases</h4>
+                <h1 id="cases"></h1>
+                <h4>Deaths</h4>
+                <h1 id="deaths"></h1>
+                <h4>% of Deaths</h4>
+                <h1 id="percent"></h1>
+            </div>
+            <div class="location-container">
+                <h4>Country</h4>
+                <h1 id="country">United States</h1>
+                <h4>Population</h4>
+                <h1 id="population"></h1>
+                <h4>Last Updated</h4>
+                <h1 id="update"></h1>
+            </div>
+        </div>
+        <script src="" async defer></script>
+        <script>
+            console.log("fetching rainbow");
+
+            catchRainbow().then(response =>{
+                console.log('yay');
+            }).catch(error => {
+                console.error(error);
+            });
+            
+            async function catchRainbow() {
+                const response = await fetch('rainbow.jpg');
+                const blob = await response.blob();
+                document.getElementById('rainbow').src = URL.createObjectURL(blob);
+            }
+
+            // fetch('rainbow.jpg').then(response => {
+            //     console.log(response);
+            //     return response.blob();
+            // }).then(blob => {
+            //     console.log(blob);
+            //     document.getElementById('rainbow').src = URL.createObjectURL(blob);
+            // }).catch(error){
+            //     console.error(error);
+            // };
+
+        </script>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>

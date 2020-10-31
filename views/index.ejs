@@ -6,15 +6,58 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css" >
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <div class = "title-img">
             <img src="" id="rainbow" width="480">
         </div>
-        <h1 class="title">COVID-19 Tracker</h1>
+        <div class = "container-fluid bg-light p-5 text-center my-3">
+            <h1 class=""> Covid-19 Tracker United States </h1>
+        </div>
+
+
+        <div class = "container my-5">
+            <div class = "text-center row">
+                <div class="col-3 text-warning">
+                    <h5>Confirmed</h5>
+                    <p id="positive"></p>
+                </div>
+                <div class="col-3 text-info">
+                    <h5>Increase</h5>
+                    <p id="increase"></p>
+                </div>
+                <div class="col-3 text-danger">
+                    <h5>Deceased</h5>
+                    <p id="death"></p>
+                </div>
+                <div class="col-3 text-success">
+                    <h5>Recovered</h5>
+                    <p id="recovered"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="container bg-light p-3 my-5 text-center">
+            <h5 class="text-info">"Prevention is the Cure."</h5>
+            <p class="text-muted">Stay Indoors Stay Safe.</p>
+        </div>
+
+    <!-- Used by Chart.js -->
+        <canvas id="myChart"></canvas>
+
+    <!-- Bottom Note -->
+        <div class="container text-center my-5">
+        <h6 class="text-info">
+            *Click on the Confirmed/Recovered/Deaths buttons above to see the chart
+            individually.*
+        </h6>
+        </div>
+
+        <!-- <h1 class="title">COVID-19 Tracker</h1>
         <h2 class="subtitle">The latest statistics regarding the "Corona Virus".</h2>
         <div class="data-container">
             <div class="stats-container">
@@ -33,7 +76,7 @@
                 <h4>Last Updated</h4>
                 <h1 id="update"></h1>
             </div>
-        </div>
+        </div> -->
         <script src="" async defer></script>
         <script>
             console.log("fetching rainbow");
@@ -63,5 +106,7 @@
         </script>
         <script src="/js/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+        <script src="/js/Chart.js"></script>
     </body>
 </html>
